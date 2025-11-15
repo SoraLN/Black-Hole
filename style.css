@@ -1,0 +1,40 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    background-image: url(a.avif);
+}
+
+/* ======== LADO ESQUERDO ======== */
+
+.lado-esquerdo{
+    display: flex;
+    flex: 27%;
+    flex-direction: column;
+}
+
+.config{
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+
+
+/* ======== LADO MEIO ======== */
+
+.lado-meio{
+    display: flex;
+    flex: 42%;
+}
+
+/* ======== LADO DIREITO ======== */
+
+.lado-direito{
+    display: flex;
+    flex: 31%;
+}

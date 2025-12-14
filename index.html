@@ -10,6 +10,8 @@
 
     <div class="container">
 
+
+        <!-- DIV RESPONSAVEL PELA INFORMAÇÕES EXTRA -->
         <div class="slin" id="container_slin">
             <h1>HELLO MY FRIEND!</h1>
             
@@ -18,32 +20,41 @@
             <button id="btn_cadastrar">CRIAR CONTA</button>
         </div>
 
+        <!-- AREA DE LOGIN -->
         <div class="lado-esquerdo">
 
-            <h1>Sing In</h1>
+            <h1>Log In</h1>
 
             <p>Log com seu email e senha</p>
 
-            <input type="email" placeholder="Email:">
-            <input type="password" placeholder="Senha:">
+            <form id="formulario_login">
+                <input type="email" placeholder="Email:" id="email" name="nome">
+                <input type="password" placeholder="Senha:" id="senha" name="email">
 
-            <button class="btn-esquerdo">LOGIN</button>
+                <button type="submit" class="btn-esquerdo">LOGIN</button>
+            </form>
         </div>
 
+
+        <!-- AREA PARA SE REGISTRAR -->
         <div class="lado-direito">
-            <h1>Log In</h1>
+            <h1>Sing In</h1>
 
             <p>Cadastre com seu nome, email e senha</p>
 
-            <input type="text" placeholder="Nome:">
-            <input type="email" placeholder="Email:">
-            <input type="password" placeholder="Senha:">
+            <form id="formulario_register">
+                <input type="text" placeholder="Nome:" id="nome_registro">
+                <input type="email" placeholder="Email:" id="email_registro">
+                <input type="password" placeholder="Senha:" id="senha_registro">
+                
+                <button type="submit" class="btn-esquerdo" id="btn_registrar">CADASTRAR</button>
+            </form>
 
-            <button class="btn-esquerdo">CADASTRAR</button>
         </div>
 
     </div>
 
 <script src="js/slin.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

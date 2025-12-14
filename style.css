@@ -27,6 +27,15 @@ body{
         font-style: normal;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form button{
+    margin-left: 25%;
+}
+
 .lado-direito h1, .lado-esquerdo h1{
     font-size: 45px;
 }

@@ -2,6 +2,7 @@ const btn_cadastrar = document.getElementById("btn_cadastrar")
 
 let contador = 0
 
+//codigo simples para fazer a div com info extra ir de um lado para outro
 btn_cadastrar.addEventListener('click',()=>{
 
     const container = document.getElementById("container_slin")
@@ -19,4 +20,13 @@ btn_cadastrar.addEventListener('click',()=>{
         texto.innerHTML = "Coloque seu nome, email e uma senha, lembrando que como o sistema é podrin nao tem sistema de esquecimento de senha, por isso guarde ela na memoria"
     }
 
+})
+
+//Evento para nao resetar a pagina depois do submite
+document.getElementById("formulario_register").addEventListener('submit', (event)=>{
+    event.preventDefault();
+})
+
+document.getElementById("formulario_login").addEventListener('submit', (event)=>{
+    event.preventDefault();
 })

@@ -1,4 +1,4 @@
-import {app, BrowserWindow} from 'electron/main';
+import {app, BrowserWindow} from 'electron';
 
 
 //função para criar a janela e o browser

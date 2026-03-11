@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --beje: #EFECE3;
-    --azul-bebe: #8FABD4;
-    --azul: #4A70A9;
-    --preto: #000000;
+    --beje: #161616;
+    --azul-bebe: #346751;
+    --azul: #C84B31;
+    --preto: #ECDBBA;
 }
 
 
@@ -208,12 +208,3 @@ input{
 .lado-direito h1{
     color: var(--azul);
 }
-
-
-/*
-    codigo para ir ao lado
-
-    transform: translate(100px);
-    transition: 2s;
-
-*/

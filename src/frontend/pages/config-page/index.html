@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#22c55e",
+              "background-light": "#f6f8f7",
+              "background-dark": "#122017", // Overriding base background to match the dark theme requirement while staying in palette
+              "accent-orange": "#f97316",
+              "accent-dark-green": "#346751",
+              "accent-red": "#C84B31",
+              "accent-cream": "#ECDBBA",
+              "neutral-gray": "#a1a1aa",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px",
+            },
+          },
+        },
+      }
+    </script>
+
+    <style>
+
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #3f3f46;
+        border-radius: 10px;
+      }
+
+      .container::-webkit-scrollbar {
+        display: none;
+      }
+
+        input[type=number]::-webkit-inner-spin-button { 
+        -webkit-appearance: none;
+    
+     }
+        input[type=number] { 
+        -moz-appearance: textfield;
+        appearance: textfield;
+
+     }
+
+    </style>
+
+  </head>
+      <div class="max-w-4xl w-full mx-auto p-8 space-y-10 container">
+        <section>
+
+          <div class="bg-[#18181b] rounded-xl border border-slate-800 overflow-hidden" style="border: none;">
+
+            <div class="p-6 border-b border-slate-800 flex items-center gap-6 bg-accent-dark-green/10" style="border: none;">
+              <div class="relative">
+                <div
+                  class="size-24 rounded-full border-4 border-[#18181b] bg-cover bg-center shadow-xl"
+                  data-alt="Large profile picture of Alex Rivera"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVgMugRX3wCfFuupfZSznCTZwdpE3GowhlnquEZNiBQQN_ZScCPfac4ANouxIZUnnwSF6AuEiDyP8BPzva5u-6lx49JH5Kh-me3DS33DEA6XZS6Q8_FlA3atVxajBLU7X_XWgynBxT5Ds8iRCorT8tx1PZMx2HXxeYP0ufUYilW0e6Gi1Ge1tEVopZbHJ_i0uUheO3MaMc6zayrCG2tnDR-jvpRCj1I57XZLNEpwlz0MK6OfJeH8qX-CBPP9sVYjaNmdBFWNRxeeD5')"></div>
+
+                <button
+                  class="absolute bottom-0 right-0 size-8 bg-primary rounded-full flex items-center justify-center text-background-dark border-4 border-[#18181b] hover:scale-110 transition-transform">
+                  <span class="material-symbols-outlined text-sm">edit</span>
+                </button>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-slate-100">Breno Oliveira</h3>
+                <p class="text-accent-cream text-sm">ID Usuario: 00001</p>
+
+                <div class="mt-2 flex gap-2">
+                  <span
+                    class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-primary/20 text-primary">Pro Plan</span>
+                  <span
+                    class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-accent-orange/20 text-accent-orange">Verified</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="space-y-2">
+                <label class="text-sm font-semibold text-slate-300">Display Name</label>
+                <input
+                  class="w-full bg-[#27272a] border border-slate-700 rounded-lg px-4 py-2.5 text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  type="text"
+                  style="border: none;"/>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-sm font-semibold text-slate-300">CPF:</label>
+                  <input
+                  class="w-full bg-[#27272a] border border-slate-700 rounded-lg px-4 py-2.5 text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  type="number"
+                  style="border: none;"/>
+              </div>
+
+              <div class="md:col-span-2 space-y-2">
+                <label class="text-sm font-semibold text-slate-300">Email Address</label>
+                <div class="flex gap-4">
+                  <input
+                    class="flex-1 bg-[#27272a]/50 border border-slate-700/50 rounded-lg px-4 py-2.5 text-neutral-gray cursor-not-allowed"
+                    disabled=""
+                    type="email"
+                    value=""
+                    style="border: none;"/>
+                  <button
+                    class="px-6 py-2.5 rounded-lg border border-slate-700 text-slate-300 font-medium hover:bg-slate-700 transition-colors" style="border: none; background-color:#346751;">
+                    Change
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  </body>
+</html>

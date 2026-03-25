@@ -63,7 +63,7 @@
 
 ---
 
-# 🗄️ Backend (se aplicar)
+# 🗄️ Backend
 
 - [ ] Criar servidor com Node.js  
 - [ ] Criar rotas (API)  
@@ -76,8 +76,10 @@
 # 🎨 Frontend
 
 - [x] Ajustar layout do dashboard  
-- [ ] Remover flecha da NAV  
+- [x] Remover flecha da NAV  
+- [x] Animation de Loading   
 - [ ] Melhorar responsividade   
+- [ ] Tela de lançamento de valores
 
 ---
 

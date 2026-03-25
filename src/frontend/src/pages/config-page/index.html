@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
 
     <script id="tailwind-config">
       tailwind.config = {
@@ -38,43 +39,17 @@
       }
     </script>
 
-    <style>
-
-      .custom-scrollbar::-webkit-scrollbar {
-        width: 6px;
-      }
-
-      .custom-scrollbar::-webkit-scrollbar-track {
-        background: transparent;
-      }
-
-      .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #3f3f46;
-        border-radius: 10px;
-      }
-
-      .container::-webkit-scrollbar {
-        display: none;
-      }
-
-        input[type=number]::-webkit-inner-spin-button { 
-        -webkit-appearance: none;
-    
-     }
-        input[type=number] { 
-        -moz-appearance: textfield;
-        appearance: textfield;
-
-     }
-
-    </style>
-
   </head>
+
       <div class="max-w-4xl w-full mx-auto p-8 space-y-10 container">
+
         <section>
+        
+            <div class="container-loading" id="iframe_loading">
+                <div class="loader"></div>
+            </div>
 
           <div class="bg-[#18181b] rounded-xl border border-slate-800 overflow-hidden" style="border: none;">
-
             <div class="p-6 border-b border-slate-800 flex items-center gap-6 bg-accent-dark-green/10" style="border: none;">
               <div class="relative">
                 <div
@@ -136,5 +111,5 @@
             </div>
           </div>
         </section>
-  </body>
+<script src="../dashbord/js/index.js"></script>
 </html>

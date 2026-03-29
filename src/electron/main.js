@@ -7,7 +7,7 @@ function createWindow () {
 
         const win = new BrowserWindow()
 
-        win.loadFile('../frontend/pages/dashbord/index.html')
+        win.loadFile('../frontend/src/pages/login/index.html')
 
         win.maximize();
 

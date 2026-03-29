@@ -4,7 +4,7 @@
 
 # 🔐 Login
 
-- [ ] Cadastramento de Usuario
+- [x] Cadastramento de Usuario
 - [ ] Login de Usuario 
 - [ ] Validar email  
 
@@ -65,10 +65,10 @@
 
 # 🗄️ Backend
 
-- [ ] Criar servidor com Node.js  
+- [x] Criar servidor com Node.js  
 - [ ] Criar rotas (API)  
-- [ ] Conectar com banco de dados  
-- [ ] Criar tabela de usuários  
+- [x] Conectar com banco de dados  
+- [x] Criar tabela de usuários  
 - [ ] Criar tabela de lançamentos  
 
 ---

@@ -6,7 +6,7 @@
 
 ## Regras
 
-- [ ] CPF apenas por número  
+- [x] CPF apenas por número  
 - [ ] Email precisa conter "@"  
 - [ ] Email deve ser válido (gmail, hotmail, etc)  
 - [ ] Não permitir campos vazios  

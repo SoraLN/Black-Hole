@@ -1,9 +1,9 @@
 import db from './database.js';
 
-export function insert_user(nome, cpf, senha){
+export function insert_user(nome, email, senha){
         db.run(
         `INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)`,
-        [nome, cpf, senha],
+        [nome, email, senha],
         function(err) {
             if(err) {
                 return console.error('Erro ao inserir', err.message);
@@ -21,4 +21,4 @@ function select_user(){
 
         console.log('Usuario: ', rows);
     })
-}z
+}

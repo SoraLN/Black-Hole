@@ -7,9 +7,9 @@
 ## Regras
 
 - [x] CPF apenas por número  
-- [ ] Email precisa conter "@"  
+- [x] Email precisa conter "@"  
 - [ ] Email deve ser válido (gmail, hotmail, etc)  
-- [ ] Não permitir campos vazios  
+- [x] Não permitir campos vazios  
 - [ ] Não permitir login sem cadastro prévio  
 - [ ] Não permitir cadastro com email repetido
 
@@ -69,16 +69,16 @@
 # 🚀 Progresso de Implementação
 
 ## Login
-- [ ] Implementado
-- [ ] Em andamento
+- [] Implementado
+- [x] Em andamento
 - [ ] Não iniciado
 
 ## Dashboard
 - [ ] Implementado
 - [ ] Em andamento
-- [ ] Não iniciado
+- [x] Não iniciado
 
 ## Configuração
 - [ ] Implementado
 - [ ] Em andamento
-- [ ] Não iniciado
+- [x] Não iniciado

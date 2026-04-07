@@ -1,5 +1,14 @@
 {
   "dependencies": {
     "dotenv": "^17.3.1"
-  }
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "scripts": {
+  "backend": "npm --prefix src/backend run start",
+  "electron": "npm --prefix src/electron run start",
+  "frontend": "npm --prefix src/frontend run start",
+  "dev": "concurrently \"npm run backend\" \"npm run electron\""
+}
 }

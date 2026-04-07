@@ -1,4 +1,8 @@
 const btn_cadastrar = document.getElementById("btn_cadastrar")
+const nome = document.getElementById("nome_registro")
+const email = document.getElementById("email_registro")
+const senha = document.getElementById("senha_registro")
+const info_cadastro = document.getElementById("info_cadastro")
 
 let contador = 0
 
@@ -29,4 +33,25 @@ document.getElementById("formulario_register").addEventListener('submit', (event
 
 document.getElementById("formulario_login").addEventListener('submit', (event)=>{
     event.preventDefault();
+})
+
+const botao_registrar = document.getElementById("btn_registrar").addEventListener("click", ()=>{
+
+    if(nome.value.trim() === "" || email.value.trim() === "" || senha.value.trim() === ""){
+        info_cadastro.style.display = "grid";
+        info_cadastro.innerHTML = "Por gentileza preencher todos os campos !!"
+        info_cadastro.style.color = "#920000"
+        setTimeout(() => {
+            info_cadastro.style.display = "none";
+        }, 4300);
+    }else{
+
+        info_cadastro.style.display = "grid"
+        info_cadastro.innerHTML = "Cadastrado Com Sucesso!!!"
+        info_cadastro.style.color = "#009218"
+
+        setTimeout(() => {
+            info_cadastro.style.display = "none";
+        }, 4300);
+    }
 })

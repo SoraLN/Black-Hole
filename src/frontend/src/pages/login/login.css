@@ -208,3 +208,11 @@ input{
 .lado-direito h1{
     color: var(--azul);
 }
+
+/* ========= INFO REGISTRAR =========== */
+
+.info-cadastro{
+    display: none;
+    font-weight: 600;
+    font-size: 20px;
+}

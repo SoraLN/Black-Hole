@@ -11,7 +11,7 @@
 # 🔐 Segurança (Login)
 
 - [ ] Sistema de autenticação com token  
-- [ ] Criptografia de senha  
+- [x] Criptografia de senha  
 - [ ] Backup de dados  !IMPORTANTE 
 
 ---

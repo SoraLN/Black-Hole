@@ -15,6 +15,10 @@ form.addEventListener("submit", async(e)=>{
         body: JSON.stringify({nome, email, senha})
     })
 
+    const data = await response.json();
+
+    console.log(data)
+
     if(response.ok){
         form.reset();
     }

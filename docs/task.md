@@ -10,7 +10,6 @@
 
 # 🔐 Segurança (Login)
 
-- [ ] Sistema de autenticação com token  
 - [x] Criptografia de senha  
 - [ ] Backup de dados  !IMPORTANTE 
 
@@ -58,7 +57,7 @@
 - [x] Criar tela de configuração  
 - [ ] Implementar troca de nome  
 - [ ] Implementar troca de foto  
-- [ ] Criar ID único por usuário  
+- [x] Criar ID único por usuário  
 - [ ] Salvar dados do usuário  
 
 ---
@@ -69,7 +68,7 @@
 - [ ] Criar rotas (API)  
 - [x] Conectar com banco de dados  
 - [x] Criar tabela de usuários  
-- [ ] Criar tabela de lançamentos  
+- [x] Criar tabela de lançamentos  
 
 ---
 
@@ -79,7 +78,7 @@
 - [x] Remover flecha da NAV  
 - [x] Animation de Loading   
 - [ ] Melhorar responsividade   
-- [ ] Tela de lançamento de valores
+- [x] Tela de lançamento de valores
 
 ---
 

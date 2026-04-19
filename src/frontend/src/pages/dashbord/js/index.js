@@ -1,6 +1,6 @@
 const iframe_button = document.getElementById("botao_iframe")
 
-iframe_button.addEventListener("click", () => {
+iframe_button.addEventListener("click", () => { //codigo para dar o efeito tchola de spin na page
 
     const iframe = document.getElementById("iframe_code")
 

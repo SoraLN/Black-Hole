@@ -4,7 +4,7 @@ import bcrypt from 'bcrypt';
 
 const router = express.Router();
 
-router.post("/usuarios", async (req, res)=>{
+router.post("/auth/register", async (req, res)=>{ //Rota para inserir usuario
 
     const {nome, email, senha} = req.body
     const senhaString = JSON.stringify(senha); //codigo para transformar a senha em uma string, pois ela esta vindo em obj e nao entra no banco de dados

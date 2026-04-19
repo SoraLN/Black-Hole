@@ -17,18 +17,62 @@ const db = new sqlite3.Database(dbPath, (err)=>{
     }
 });
 
-db.serialize(()=>{
-    db.run(`
-        CREATE TABLE IF NOT EXISTS usuarios(
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            nome TEXT NOT NULL,
-            email TEXT NOT NULL UNIQUE,
-            senha TEXT NOT NULL
-        )
-    
-    `);
+db.serialize(()=>{ 
+    try{
+        db.run('PRAGMA foreign_keys = on')
 
-    console.log('Tabela Criada ou Ja Existe')
+        db.run(`
+            CREATE TABLE IF NOT EXISTS users(
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                nome TEXT NOT NULL,
+                email TEXT NOT NULL UNIQUE,
+                hash_senha TEXT NOT NULL,
+                photo_url TEXT
+            )
+        `); //Tabela de Usuarios
+
+        db.run(`
+            CREATE TABLE IF NOT EXISTS categories(
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                nome TEXT NOT NULL,
+                created_at TEXT NOT NULL,
+                FOREIGN KEY (user_id) REFERENCES users(id)
+            )
+        
+        `); //Tabela de Categorias
+
+        db.run(`
+            CREATE TABLE IF NOT EXISTS salaries(
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                valor_salario REAL NOT NULL,
+                data TEXT NOT NULL,
+                created_at TEXT NOT NULL,
+                FOREIGN KEY (user_id) REFERENCES users(id)
+            )
+        
+        `); //Tabela de valores salariais
+
+        db.run(`
+            CREATE TABLE IF NOT EXISTS expenses(
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                category_id INTEGER,
+                valor_lancamento REAL NOT NULL,
+                descricao TEXT,
+                data TEXT NOT NULL,
+                created_at TEXT NOT NULL,
+                FOREIGN KEY (user_id) REFERENCES users(id),
+                FOREIGN KEY (category_id) REFERENCES categories(id)
+            )
+        
+        `); //Tabela de lançamento de despesa
+
+        console.log("Tabelas Criadas com Sucesso!!")
+    } catch(error){
+        console.log("Erro Na Criação de Tabela ⚠️", error.message)
+    }
 })
 
 export default db;

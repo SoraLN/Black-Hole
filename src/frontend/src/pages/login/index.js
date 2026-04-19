@@ -35,6 +35,7 @@ document.getElementById("formulario_login").addEventListener('submit', (event)=>
     event.preventDefault();
 })
 
+//codigo para aparecer e desaparecer o erro na hora de registrar
 const botao_registrar = document.getElementById("btn_registrar").addEventListener("click", ()=>{
 
     if(nome.value.trim() === "" || email.value.trim() === "" || senha.value.trim() === ""){

@@ -1,13 +1,13 @@
-const form = document.getElementById("formulario_register")
+const form_registrar = document.getElementById("formulario_register")
 
-form.addEventListener("submit", async(e)=>{
+form_registrar.addEventListener("submit", async(e)=>{ //api para levar os dados para o backed
     e.preventDefault();
 
     const nome = document.getElementById("nome_registro").value
     const email = document.getElementById("email_registro").value
     const senha = document.getElementById("senha_registro").value
 
-    const response = await fetch("http://localhost:3000/usuarios", {
+    const response = await fetch("http://localhost:3000/auth/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -20,6 +20,6 @@ form.addEventListener("submit", async(e)=>{
     console.log(data)
 
     if(response.ok){
-        form.reset();
+        form_registrar.reset();
     }
 })

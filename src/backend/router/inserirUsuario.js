@@ -13,6 +13,7 @@ router.post("/usuarios", async (req, res)=>{
 
     if(!nome || !email || !senha){
         return res.status(400).json({ erro: "Preencha tudo" });
+        res.json({ mensagem: "Usuario Criado!"})
     }
 
     try{
@@ -20,8 +21,6 @@ router.post("/usuarios", async (req, res)=>{
     } catch(error){
         console.error("Erro na rota da api: ", error.mensagem)
     }
-
-    res.json({ mensagem: "Usuario Criado!"})
 
 })
 

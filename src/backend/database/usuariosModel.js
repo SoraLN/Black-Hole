@@ -25,12 +25,38 @@ export function select_user(email){
     });
 }
 
-function excluir_colum(){ //comando para mim (excluir depois)
-        db.all(`DROP TABLE users;`, [], (err, rows)=>{
+export function select_user_email(email) {
+    return new Promise((resolve, reject) => {
+        db.get(
+            `SELECT EXISTS(SELECT 1 FROM users WHERE email = ?) AS existe`,
+            [email],
+            (err, row) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(row.existe);
+                }
+            }
+        );
+    });
+}
+
+function excluir_colum(){ //comando para mim (excluir depois!!!)
+        db.all(`DROP TABLE users;`, [], (err)=>{
         if(err) {
             return console.error("Erro ao Excluir: ", err.message);
         }
 
-        console.log('Excluido', rows);
+        console.log('Excluido');
+    })
+}
+
+function atualizar_colum(){ //comando para mim (excluir depois!!!)
+        db.all(`DELETE FROM users WHERE administrador = 0;`, [], (err)=>{
+        if(err) {
+            return console.error("Erro ao atualizar: ", err.message);
+        }
+
+        console.log('Usuarios atualizado !!');
     })
 }

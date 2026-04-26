@@ -27,20 +27,10 @@ db.serialize(()=>{
                 nome TEXT NOT NULL,
                 email TEXT NOT NULL UNIQUE,
                 hash_senha TEXT NOT NULL,
+                administrador INTEGER DEFAULT 0,
                 photo_url TEXT
             )
         `); //Tabela de Usuarios
-
-        db.run(`
-            CREATE TABLE IF NOT EXISTS categories(
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                user_id INTEGER,
-                nome TEXT NOT NULL,
-                created_at TEXT NOT NULL,
-                FOREIGN KEY (user_id) REFERENCES users(id)
-            )
-        
-        `); //Tabela de Categorias
 
         db.run(`
             CREATE TABLE IF NOT EXISTS salaries(
@@ -58,13 +48,11 @@ db.serialize(()=>{
             CREATE TABLE IF NOT EXISTS expenses(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 user_id INTEGER,
-                category_id INTEGER,
                 valor_lancamento REAL NOT NULL,
                 descricao TEXT,
                 data TEXT NOT NULL,
                 created_at TEXT NOT NULL,
-                FOREIGN KEY (user_id) REFERENCES users(id),
-                FOREIGN KEY (category_id) REFERENCES categories(id)
+                FOREIGN KEY (user_id) REFERENCES users(id)
             )
         
         `); //Tabela de lançamento de despesa

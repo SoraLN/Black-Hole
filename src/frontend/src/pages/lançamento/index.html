@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+
+</head>
+<body class="bg-background text-on-surface min-h-screen overflow-hidden" style="display: flex; align-items: center; justify-content: center;">
+
+  <!-- Main Content Area -->
+  <main class="relative w-full min-h-screen flex items-center justify-center px-4 py-12">
+    <!-- Abstract Background Detail -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] editorial-gradient opacity-[0.05] blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="w-full max-w-2xl z-10">
+      <div class="mb-10 text-center">
+        <h2 class="text-4xl font-bold tracking-tight text-[#ECDBBA] mb-2">Novo Lançamento</h2>
+        <div class="h-1 w-12 editorial-gradient mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Form Card -->
+      <div class="bg-surface-container p-10 rounded-xl shadow-2xl border border-white/5">
+        <form class="space-y-8">
+
+          <!-- Row 1: Finance Summary -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-2">
+              <label class="block text-[10px] font-bold uppercase tracking-widest text-[#346751] ml-1">Salário do mês</label>
+              <div class="relative group">
+                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-[#ECDBBA]/40 font-medium">R$</span>
+                <input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border border-white/5 rounded-lg text-[#ECDBBA] focus:bg-surface-container-high focus:ring-1 focus:ring-[#C84B31]/30 focus:border-[#C84B31]/30 transition-all text-lg font-medium" placeholder="0,00" required="" step="0.01" type="number" />
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label class="block text-[10px] font-bold uppercase tracking-widest text-[#346751] ml-1">Despesas fixas</label>
+              <div class="relative group">
+                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-[#ECDBBA]/40 font-medium">R$</span>
+                <input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border border-white/5 rounded-lg text-[#ECDBBA] focus:bg-surface-container-high focus:ring-1 focus:ring-[#C84B31]/30 focus:border-[#C84B31]/30 transition-all text-lg font-medium" placeholder="0,00" required="" step="0.01" type="number" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Transaction Details -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-2">
+              <label class="block text-[10px] font-bold uppercase tracking-widest text-[#346751] ml-1">Valor do lançamento</label>
+              <div class="relative group">
+                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-[#C84B31] font-bold">R$</span>
+                <input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border border-white/5 rounded-lg text-[#C84B31] focus:bg-surface-container-high focus:ring-1 focus:ring-[#C84B31]/30 focus:border-[#C84B31]/30 transition-all text-xl font-bold" placeholder="0,00" required="" step="0.01" type="number" />
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label class="block text-[10px] font-bold uppercase tracking-widest text-[#346751] ml-1">Categoria do lançamento</label>
+              <div class="relative group">
+                <select class="w-full px-4 py-4 bg-surface-container-low border border-white/5 rounded-lg text-[#ECDBBA] focus:bg-surface-container-high focus:ring-1 focus:ring-[#C84B31]/30 focus:border-[#C84B31]/30 transition-all" placeholder="Ex: Alimentação, Tech, Viagem" required="" type="text" />
+                  <option value="" disabled selected>Selecione uma categoria</option>
+                  <option value="alimentacao">Alimentação</option>
+                  <option value="tech">Contas Fixas</option>
+                  <option value="viagem">Transporte</option>
+                  <option value="alimentacao">Lazer</option>
+                  <option value="tech">Saúde</option>
+                  <option value="viagem">Educação</option>
+                  <option value="viagem">Investimento</option>
+                  <option value="alimentacao">Moradia</option>
+                  <option value="tech">Compras Avulso</option>
+                </select>
+                <div class="absolute -bottom-6 left-1 flex items-center gap-1.5 opacity-40 group-focus-within:opacity-70 transition-opacity">
+                  <span class="material-symbols-outlined text-[12px]" data-icon="monitoring">monitoring</span>
+                  <span class="text-[9px] uppercase tracking-wider font-medium">Alimenta seus gráficos de gastos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3: Meta -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-2">
+            <div class="md:col-span-2 space-y-2">
+              <label class="block text-[10px] font-bold uppercase tracking-widest text-[#346751] ml-1">Descrição</label>
+              <input class="w-full px-4 py-4 bg-surface-container-low border border-white/5 rounded-lg text-[#ECDBBA] focus:bg-surface-container-high focus:ring-1 focus:ring-[#C84B31]/30 focus:border-[#C84B31]/30 transition-all" placeholder="Ex: Assinatura de software editorial" required="" type="text" />
+            </div>
+
+            <div class="space-y-2">
+              <label class="block text-[10px] font-bold uppercase tracking-widest text-[#346751] ml-1">Tipo do lançamento</label>
+
+              <label class="switch">
+                <input type="checkbox" id="input_checkbox">
+                <span class="slider"></span>
+              </label>
+
+              <p class="p-entrada-saida" style="right: -5.5rem; color: #5555;" id="p_entrada">Entrada</p>
+              <p class="p-entrada-saida" style="top: -1.7rem; right: -0.3rem; color: #b43d25;" id="p_saida">Saída</p>
+            </div>
+          </div>
+
+          <!-- Action -->
+          <div class="pt-6">
+            <button class="w-full editorial-gradient text-white font-bold py-5 rounded-lg active:scale-[0.99] transition-all flex items-center justify-center gap-3 shadow-lg shadow-[#C84B31]/20 group" type="submit">
+              <span>Adicionar Lançamento</span>
+              <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+            </button>
+            <p class="text-[10px] text-center text-[#346751] mt-4 uppercase tracking-[0.3em] font-bold">Authorized Transaction Layer • SSL Secured</p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+<script id="tailwind-config" src="script.js"></script>
+</html>

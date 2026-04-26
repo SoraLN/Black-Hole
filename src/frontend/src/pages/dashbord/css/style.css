@@ -25,3 +25,19 @@ body {
   top: 15.7rem;
   right: 64.4rem;
 }
+
+/* IFRAME DO LANÇAMENTO */
+
+.iframe-lancamento{
+  position: absolute;
+  z-index: 1;
+  height: 80%;
+  width: 80%;
+  top: 6rem;
+  right: 12rem;
+  border-radius: 20px;
+}
+
+.blur{
+  filter: blur(100px);
+}

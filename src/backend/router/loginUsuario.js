@@ -14,12 +14,13 @@ router.post("/auth/login", async (req, res)=> {
         return res.status(404).json({ erro: "Usuario Nao Encontrado"})
       }
 
-      const senhaCorreta = await bcrypt.compare(senha, user.hash_senha)
+      const senhaString = JSON.stringify(senha)
+      const senhaCorreta = await bcrypt.compare(senhaString, user.hash_senha)
 
       if(!senhaCorreta){
         return res.status(401).json({ Erro: "Senha Incorreta", Senha: senhaCorreta})
       }
-
+      
       res.json({ mensagem: "OK", user})
     } catch(error){
         console.error("Erro na busca", error.mensagem)

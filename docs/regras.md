@@ -10,8 +10,8 @@
 - [x] Email precisa conter "@"  
 - [ ] Email deve ser válido (gmail, hotmail, etc)  
 - [x] Não permitir campos vazios  
-- [ ] Não permitir login sem cadastro prévio  
-- [ ] Não permitir cadastro com email repetido
+- [x] Não permitir login sem cadastro prévio  
+- [x] Não permitir cadastro com email repetido
 
 ---
 

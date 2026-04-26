@@ -1,3 +1,4 @@
 node_modules/
 .env
-src/backed/database/banco.db
+src/backend/database/banco.db
+lembrete.txt

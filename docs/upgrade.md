@@ -61,4 +61,5 @@ Se o usuário definiu gastar R$300 com comida e já gastou R$100 → progresso d
 
 - [ ] Multi-contas (carteira, banco, etc)  
 - [ ] Sistema de tags nos lançamentos  
-- [ ] Filtros avançados  
+- [ ] Filtros avançados 
+- [ ] Sistema de autenticação com token  

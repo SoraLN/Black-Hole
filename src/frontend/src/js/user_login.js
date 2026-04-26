@@ -11,8 +11,12 @@ const form_login = document.getElementById("formulario_login").addEventListener(
         },
         body: JSON.stringify({email, senha})
     })
+    .then(res => res.json())
+    .then(data => {
+        if(data.mensagem == "OK"){
+            window.location.replace("../dashbord/index.html")
+        }
+    })
 
     const data = await response.json()
-
-    console.log(data)
 })
